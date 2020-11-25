@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuadraticEquationSolver</string>
+
+    <!-- ACTIVITY_SOLVER -->
+    <string name="main_label">Quadratic equation solver</string>
+    <string name="equation">equation</string>
+    <string name="equation_placeholder">Entering an equation</string>
+    <string name="sq_x_btn">x²</string>
+    <string name="x_btn">x</string>
+    <string name="plus_btn">+</string>
+    <string name="minus_btn">-</string>
+    <string name="equally_btn">=</string>
+    <string name="calculate_btn">Calculate</string>
+
+
+</resources>

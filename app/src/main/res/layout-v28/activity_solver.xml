@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MAIN LAYOUT-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.SolverActivity">
+
+
+    <!-- LABEL -->
+    <TextView
+        android:id="@+id/main_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/main_label"
+        android:textAlignment="center"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/equation_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- FIELD LABEL -->
+    <TextView
+        android:id="@+id/equation_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+
+        android:text="@string/equation"
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/equation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_label" />
+
+    <!-- INPUT FIELD -->
+    <EditText
+        android:id="@+id/equation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        android:autofillHints="equation"
+        android:hint="@string/equation_placeholder"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        android:outlineAmbientShadowColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equation_label" />
+
+    <!-- BUTTONS LAYOUT -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equation">
+
+        <Button
+            android:id="@+id/sq_x_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="@string/sq_x_btn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_secondary_variant"
+
+            app:layout_constraintEnd_toStartOf="@+id/x_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/x_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="@string/x_btn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_secondary_variant"
+
+            app:layout_constraintEnd_toStartOf="@+id/plus_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sq_x_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="@string/plus_btn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_secondary_variant"
+
+            app:layout_constraintEnd_toStartOf="@+id/minus_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/x_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/minus_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="@string/minus_btn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_secondary_variant"
+
+            app:layout_constraintEnd_toStartOf="@+id/equally_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/plus_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/equally_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="@string/equally_btn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_secondary_variant"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/minus_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- CALCULATION BUTTON -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+
+        android:text="@string/calculate_btn"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/design_default_color_secondary_variant"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
