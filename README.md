@@ -1,7 +1,7 @@
 # Quadratic equation solver
-The app calculates the roots of a quadratic equation
+The app for android 6.0+ (Matshmallow) calculates the roots of a quadratic equation 
 
 Application:
-1. Launch the applicatio
+1. Launch the application
 2. Enter the equation in the format: x² ± bx + c = 0
 3. Press the button 'Calculate'
